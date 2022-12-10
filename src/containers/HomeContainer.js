@@ -9,10 +9,10 @@ const mapDispatchToProps = dispatch => {
     addToCartHandler:(data) => dispatch(AddToCart(data)),
   }
 }
-const mapStateToProps =state => {
+const mapStateToProps = (state) => {
   return {
-    // addToCartHandler: (data) => dispatch(AddToCart(data)),
-  }
-}
+    data: state.cartItems,
+  };
+};
 //export default Home;
- export default connect(mapDispatchToProps,mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
